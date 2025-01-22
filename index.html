@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ultimate Bot Smash</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="character-select" class="screen active">
+        <div class="container">
+            <h1>Bot Team Select</h1>
+            
+            <!-- Team Size Selection -->
+            <div id="team-size-select">
+                <label for="team-size">Team Size (1-5):</label>
+                <input type="number" id="team-size" min="1" max="5" value="2">
+            </div>
+            
+            <!-- Character Grid -->
+            <h2>Choose Your Fighters</h2>
+            <div id="character-grid" class="character-grid"></div>
+            
+            <!-- Selected Teams -->
+            <div class="selected-fighters">
+                <div id="team1-selected" class="selected-team">Team 1: No Bots Selected</div>
+                <div id="team2-selected" class="selected-team">Team 2: No Bots Selected</div>
+            </div>
+            
+            <!-- Start Battle Button -->
+            <button id="proceed-to-map" disabled>Select Map</button>
+        </div>
+    </div>
+
+    <div id="map-select" class="screen">
+        <div class="container">
+            <h1>Select Battle Arena</h1>
+            
+            <!-- Map Grid -->
+            <div id="map-select-grid" class="map-grid"></div>
+            
+            <!-- Navigation Buttons -->
+            <div class="map-select-actions">
+                <button id="back-to-character-select">Back</button>
+                <button id="start-battle" disabled>Start Battle</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="battle-screen" class="screen">
+        <div class="arena">
+            <div class="stats">Wins - <span id="team1Wins">0</span> : <span id="team2Wins">0</span></div>
+        </div>
+        <div id="winner-display" class="winner-display"></div>
+    </div>
+
+    <script type="module" src="character-select.js"></script>
+    <script type="module" src="game.js"></script>
+</body>
+</html>
